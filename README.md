@@ -45,3 +45,11 @@ python3 manage.py runserver
 
 Visit http://127.0.0.1:8000 in your browser to see the project running.
 
+
+---
+
+# Learning
+
+- Django is not an SPA
+- WSGI (Web Server Gateway Interface): A Python standard to define comunication between a web server and Python web application
+- ASGI (Asynchronous Server Gateway Interface): successor to WSGI. Enable synchronous and asynchronous communication.
