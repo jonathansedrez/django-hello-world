@@ -21,7 +21,7 @@ cd django-hello-world
 source venv/bin/activate
 ```
 
-#####  On Windows (PowerShell):
+##### On Windows (PowerShell):
 
 ```
 .\venv\Scripts\Activate.ps1
@@ -32,8 +32,8 @@ source venv/bin/activate
 ```
 python3 -m django --version
 ```
-You should see the installed Django version.
 
+You should see the installed Django version.
 
 ## Running the Development Server
 
@@ -45,8 +45,15 @@ python3 manage.py runserver
 
 Visit http://127.0.0.1:8000 in your browser to see the project running.
 
-
 ---
+
+# To-do
+
+- [x] List to-dos
+- [ ] update to-dos
+- [ ] add to-do details (route navigation)
+- [ ] add scss
+- [ ] add unit tests
 
 # Learning
 
