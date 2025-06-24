@@ -1,0 +1,9 @@
+<ul>
+  {% for todo in todos_list %}
+  <fieldset>
+    <input type="checkbox" id="{{ todo.id }} " name="{{ todo.id }} value="{{
+    todo.todo_label }}" />
+    <label for="{{ todo.id }}">{{ todo.todo_label }}</label>
+  </fieldset>
+  {% endfor %}
+</ul>
