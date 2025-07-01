@@ -50,10 +50,12 @@ Visit http://127.0.0.1:8000 in your browser to see the project running.
 # To-do
 
 - [x] List to-dos
+- [x] add to-do details (route navigation)
+- [ ] add input to create todo
 - [ ] update to-dos
-- [ ] add to-do details (route navigation)
 - [ ] add scss
 - [ ] add unit tests
+- [ ] create a base template HTML
 
 # Learning
 
