@@ -1,10 +1,16 @@
 from django.http import HttpResponse, Http404
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import loader
 
 from .models import Todo
 
 def index(request):
+    if request.method == "POST":
+        todo_label = request.POST.get("new-todo")
+        if todo_label:
+            Todo.objects.create(todo_label=todo_label)
+            return redirect("index") 
+        
     todos_list = Todo.objects.all()
     template = loader.get_template("todos/index.html")
     context = { "todos_list": todos_list }

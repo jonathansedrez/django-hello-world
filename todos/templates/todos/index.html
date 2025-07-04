@@ -1,11 +1,19 @@
 {% load static %}
 
 <head>
-  <script src="{% static 'todos/index.js' %}" defer></script>
 </head>
 
 <!DOCTYPE html>
 <html>
+  <form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+      <input type="text" id="new-todo" name="new-todo"/>
+      <label for="new-todo">Insert new to-do</label>
+    </fieldset>
+    <button type="submit" />ADD</button>
+  </form>
+
   <ul>
     {% for todo in todos_list %}
     <fieldset>
