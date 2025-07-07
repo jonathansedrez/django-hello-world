@@ -51,8 +51,8 @@ Visit http://127.0.0.1:8000 in your browser to see the project running.
 
 - [x] List to-dos
 - [x] add to-do details (route navigation)
-- [ ] add input to create todo
-- [ ] update to-dos
+- [x] add input to create todo
+- [x] update to-dos
 - [ ] add scss
 - [ ] add unit tests
 - [ ] create a base template HTML
@@ -62,3 +62,4 @@ Visit http://127.0.0.1:8000 in your browser to see the project running.
 - Django is not an SPA
 - WSGI (Web Server Gateway Interface): A Python standard to define comunication between a web server and Python web application
 - ASGI (Asynchronous Server Gateway Interface): successor to WSGI. Enable synchronous and asynchronous communication.
+- pk (primary key): Example `Todo.objects.get(pk=todo_id). Means "find object by primary key todo id"

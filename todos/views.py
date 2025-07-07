@@ -6,6 +6,12 @@ from .models import Todo
 
 def index(request):
     if request.method == "POST":
+        if "todo-id" in request.POST:
+            todo_id = request.POST.get("todo-id")
+            todo = Todo.objects.get(pk=todo_id)
+            todo.is_checked = not todo.is_checked
+            todo.save()
+            return redirect("index")        
         todo_label = request.POST.get("new-todo")
         if todo_label:
             Todo.objects.create(todo_label=todo_label)
