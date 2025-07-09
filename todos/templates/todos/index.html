@@ -1,30 +1,37 @@
-{% load static %}
-
-<head>
-</head>
-
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %} {% block content %}
+<div>
   <form action="{% url 'index' %}" method="post">
     {% csrf_token %}
     <fieldset>
-      <input type="text" id="new-todo" name="new-todo"/>
+      <input type="text" id="new-todo" name="new-todo" />
       <label for="new-todo">Insert new to-do</label>
     </fieldset>
-    <button type="submit" />ADD</button>
+    <button type="submit">ADD</button>
   </form>
-
   <ul>
     {% for todo in todos_list %}
     <fieldset>
       <form action="{% url 'index' %}" method="post">
         {% csrf_token %}
-        <input type="hidden" name="todo-id" value="{{ todo.id }}">
-        <input type="checkbox" id="{{ todo.id }}" name="completed" value="true" {% if todo.is_checked %}checked{% endif %} onchange="this.form.submit();" />
+        <input type="hidden" name="todo-id" value="{{ todo.id }}" />
+        <input
+          type="checkbox"
+          id="{{ todo.id }}"
+          name="completed"
+          value="true"
+          {%
+          if
+          todo.is_checked
+          %}checked{%
+          endif
+          %}
+          onchange="this.form.submit();"
+        />
         <label for="{{ todo.id }}">{{ todo.todo_label }}</label>
         <a href="{% url 'details' todo.id %}">details</a>
       </form>
     </fieldset>
     {% endfor %}
   </ul>
-</html>
+</div>
+{% endblock %}
