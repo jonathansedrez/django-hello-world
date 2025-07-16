@@ -54,8 +54,8 @@ Visit http://127.0.0.1:8000 in your browser to see the project running.
 - [x] add input to create todo
 - [x] update to-dos
 - [x] create a base template HTML
-- [ ] add scss
 - [ ] add unit tests
+- [ ] add scss
 
 # Learning
 
