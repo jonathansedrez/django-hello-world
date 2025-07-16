@@ -63,3 +63,4 @@ Visit http://127.0.0.1:8000 in your browser to see the project running.
 - WSGI (Web Server Gateway Interface): A Python standard to define comunication between a web server and Python web application
 - ASGI (Asynchronous Server Gateway Interface): successor to WSGI. Enable synchronous and asynchronous communication.
 - pk (primary key): Example `Todo.objects.get(pk=todo_id). Means "find object by primary key todo id"
+- setUp(self): Works like beforeEach on React Testing library
