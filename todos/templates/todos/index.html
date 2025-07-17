@@ -2,9 +2,9 @@
 <div>
   <form action="{% url 'index' %}" method="post">
     {% csrf_token %}
-    <fieldset>
-      <input type="text" id="new-todo" name="new-todo" />
+    <fieldset class="new-todo">
       <label for="new-todo">Insert new to-do</label>
+      <input type="text" id="new-todo" name="new-todo" />
     </fieldset>
     <button type="submit">ADD</button>
   </form>
